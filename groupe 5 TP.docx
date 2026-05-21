@@ -1,1 +1,62 @@
 TP groupe 5 
+P SUR LE FONCTIONNEMENT MATHÉMATIQUE ET ÉTAPES DE L’ALGORITHME D’ADAM ET D’ADAMw
+NÉHÉMIE NAKASHENYI
+BULONZA BIRINGANINE
+DÉLICE CHAMUTU  
+BAC 2 GÉNIE MINIER
+PARTIEI—FonctionnementMathématiqued’Adam
+Objectif Adam cherche à minimiser une fonction de coûtJ(θ).
+Legradient calculé est:gₜ=∇θJ(θₜ)
+.Premier moment Adam calculeune moyenne mobile exponentielle des gradients:
+mₜ=β₁mₜ₋₁+(1−β₁)gₜ.
+Second moment Adam calcule aussi la moyenne mobile du carré des gradients:
+vₜ=β₂vₜ₋₁+(1−β₂)gₜ².
+Correction du biais m̂ₜ=mₜ/(1−β₁ᵗ)etv̂ₜ=vₜ/(1−β₂ᵗ).
+Mise à jour θₜ₊₁=θₜ−α·m̂ₜ/(√v̂ₜ+ε).
+Étapesdel’AlgorithmeAdam
+Étape1:Initialiser les paramètres et hyperparamètres
+Étape2:Calculer legradient 
+Étape3:Calculer le premier moment
+Étape4:Calculer le second moment
+Étape5:Corriger le biais 
+Étape6:Mettre à jour les paramètres
+Étape7:Répéter jusqu’à convergence
+PARTIEII—Fonctionnement Mathématique d’AdamW
+Gradient gₜ=∇θJ(θₜ).
+Premier moment mₜ=β₁mₜ₋₁+(1−β₁)gₜ.
+Second moment vₜ=β₂vₜ₋₁+(1−β₂)gₜ².
+Correction du biais m̂ₜ=mₜ/(1−β₁ᵗ)etv̂ₜ=vₜ/(1−β₂ᵗ).
+Mise à jour Adam θₜ₊₁=θₜ−α·m̂ₜ/(√v̂ₜ+ε).
+Weight Decay θₜ₊₁=θₜ₊₁−αλθₜ.
+Formule complète θₜ₊₁=θₜ−α·m̂ₜ/(√v̂ₜ+ε)−αλθₜ.
+Étapes del’Algorithme AdamW 
+Étape1:Initialiser les paramètres
+Étape2:Calculer le gradient
+Étape3:Mettre à jour le premier moment
+Étape4:Mettre à jour le second moment
+Étape5:Corriger le biais 
+Étape6:Effectuer la mise à jour Adam
+Étape7:Appliquer leweight decay
+Étape8:Répéter jusqu’à convergence
+Comparaison entre Adam et AdamW
+3. Différences principales
+Critère
+Adam
+(*)AdamW
+-Gestion du weight decay
+Mélangé au gradient
+*Séparé du gradient
+-Régularisation
+Moins efficace
+*Plus efficace
+-Généralisation
+Peut surapprendre (overfitting)
+*Meilleure généralisation
+-Performance sur grands modèles
+Bonne
+*Très bonne
+-Utilisation actuelle
+Ancienne référence
+*Standard moderne
+Transformers / LLM
+Utilisé
